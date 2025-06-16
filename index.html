@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador con clic izquierdo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      user-select: none;
+    }
+    #contador {
+      font-size: 48px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Haz clic izquierdo en cualquier parte</h1>
+  <div id="contador">0</div>
+
+  <script>
+    let contador = 0;
+    const contadorElemento = document.getElementById("contador");
+
+    document.addEventListener("mousedown", function(event) {
+      if (event.button === 0) { // 0 = clic izquierdo
+        contador++;
+        contadorElemento.textContent = contador;
+      }
+    });
+  </script>
+</body>
+</html>
